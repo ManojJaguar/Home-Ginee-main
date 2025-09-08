@@ -1,0 +1,36 @@
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #ffffff; /* ensure white background */
+  color: #000000; /* default black text */
+}
+
+/* Make sure all text elements inherit correctly */
+p, h1, h2, h3, h4, h5, h6, span, div, a {
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit; /* Ensure links inherit color */
+}
+a:hover {
+  text-decoration: underline; /* Add underline on hover for better visibility */
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Ensure images are block elements */
+}
+/* Ensure code blocks are styled correctly */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+
+}

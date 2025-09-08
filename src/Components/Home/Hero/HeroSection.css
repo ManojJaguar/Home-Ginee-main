@@ -1,0 +1,204 @@
+.chatBotWidget {
+  position: absolute;
+  bottom: 80px; /* moved up from 20px */
+  right: 20px;
+  z-index: 100;
+}
+
+.chatIcon {
+  width: 55px;
+  height: 55px;
+  background-color: purple;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.chatIcon:hover {
+  transform: scale(1.1);
+}
+
+.heroMain {
+  background: linear-gradient(135deg, #f9f9f9, #f0f4ff);
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  padding: 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh; /* wide banner style */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+.heroMain::before,
+.heroMain::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(194, 41, 40, 0.08);
+  z-index: 0;
+}
+
+.heroMain::before {
+  width: 250px;
+  height: 250px;
+  top: -80px;
+  left: -80px;
+}
+
+.heroMain::after {
+  width: 200px;
+  height: 200px;
+  bottom: -60px;
+  right: -60px;
+}
+
+.sectionleft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  z-index: 1;
+}
+
+.sectionleft p {
+  position: relative;
+  padding-left: 50px;
+  color: #c22928;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sectionleft p::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: #c22928;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sectionleft h1 {
+  font-size: 65px;
+  text-transform: uppercase;
+  font-weight: 700;
+  white-space: nowrap; /* single line */
+  color: #222;
+}
+
+.sectionleft span {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.heroLink {
+  display: flex;
+}
+
+.sectionleft a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.sectionleft a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 75%;
+  border-bottom: 2px solid black;
+  transition: width 0.2s ease;
+}
+
+.sectionleft a:hover::after {
+  width: 100%;
+}
+
+.sectionleft h5 {
+  display: flex;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sectionright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  z-index: 1;
+}
+
+.heroImage {
+  width: 100%;        /* Fill width */
+  height: auto;       /* Maintain aspect */
+  max-height: 70vh;   /* Avoid too tall */
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .sectionleft h1 {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroMain {
+    padding: 30px 40px;
+    flex-direction: column;
+    text-align: center;
+    height: auto; /* let it expand naturally */
+  }
+
+  .sectionleft {
+    width: 100%;
+  }
+
+  .sectionleft h1 {
+    font-size: 45px;
+  }
+
+  .sectionright {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .heroImage {
+    width: 90%;
+    max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .heroMain {
+    padding: 30px 15px;
+  }
+
+  .sectionleft h1 {
+    font-size: 35px;
+  }
+
+  .sectionleft p {
+    font-size: 14px;
+  }
+
+  .heroImage {
+    width: 100%;
+    max-height: 250px;
+  }
+}

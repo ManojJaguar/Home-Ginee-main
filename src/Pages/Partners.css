@@ -1,0 +1,133 @@
+.services-dropdown {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.services-dropdown option {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.partners-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(to right, #f9f9f9, #eaf4ff);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.partners-left, .partners-right {
+  flex: 1;
+  min-width: 300px;
+}
+.submit-btn {
+  display: block;
+  margin: 1rem auto; /* centers the button */
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+
+.partner-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.partner-logo {
+  width: 120px; /* Increase from default (e.g., 80px) */
+  height: auto;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05); /* Optional: subtle hover effect */
+}
+
+
+.learn-btn {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;   /* smaller padding */
+  font-size: 0.85rem;     /* smaller text */
+  border-radius: 6px;     /* slightly smaller radius */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;  /* keep original size */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+.learn-btn:hover, .submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.partner-form {
+  margin-top: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-group input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.terms {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.map-container {
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.company-info {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}

@@ -1,0 +1,220 @@
+/* Wrapper Section */
+.loginSignUpSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.loginSignUpContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Tabs */
+.loginSignUpTabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.loginSignUpTabs p {
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.loginSignUpTabs p:hover {
+  color: #ff5722;
+}
+
+.loginSignUpTabs p.active {
+  color: #ff5722;
+}
+
+.loginSignUpTabs p.active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff5722, #ff9800);
+  border-radius: 2px;
+}
+
+/* Login Form */
+.loginSignUpTabsContentLogin form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+}
+
+.loginSignUpTabsContentLogin form input {
+  padding: 15px;
+  border: 2px solid #e4e4e4;
+  outline: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.loginSignUpTabsContentLogin form input:focus {
+  border-color: #ff5722;
+  box-shadow: 0px 0px 8px rgba(255, 87, 34, 0.3);
+}
+
+/* Remember me + Forgot Password */
+.loginSignUpForgetPass {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.loginSignUpForgetPass a {
+  font-size: 14px;
+  color: #ff5722;
+  transition: 0.3s;
+}
+
+.loginSignUpForgetPass a:hover {
+  color: #e64a19;
+}
+
+/* Custom Radio */
+.loginSignUpForgetPass label input {
+  appearance: none;
+  border: 2px solid #e4e4e4;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  padding: 6px !important;
+  border-radius: 50%;
+}
+
+.loginSignUpForgetPass label input:checked {
+  border: 2px solid #ff5722;
+}
+
+.loginSignUpForgetPass label input::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #ff5722;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.loginSignUpForgetPass label input:checked::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Button */
+.loginSignUpTabsContentLogin button,
+.loginSignUpTabsContentRegister button {
+  padding: 15px;
+  background: linear-gradient(90deg, #ff5722, #ff9800);
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.loginSignUpTabsContentLogin button:hover,
+.loginSignUpTabsContentRegister button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(255, 87, 34, 0.3);
+}
+
+/* Sign up text */
+.loginSignUpTabsContentLoginText p {
+  font-size: 14px;
+  text-align: center;
+  color: #767676;
+}
+
+.loginSignUpTabsContentLoginText p span {
+  color: #ff5722;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.loginSignUpTabsContentLoginText p span:hover {
+  color: #e64a19;
+}
+
+/* Register */
+.loginSignUpTabsContentRegister form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 500px;
+}
+
+.loginSignUpTabsContentRegister input {
+  padding: 15px;
+  border: 2px solid #e4e4e4;
+  outline: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.loginSignUpTabsContentRegister input:focus {
+  border-color: #ff9800;
+  box-shadow: 0px 0px 8px rgba(255, 152, 0, 0.3);
+}
+
+.loginSignUpTabsContentRegister p {
+  color: #767676;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media screen and (max-width: 450px) {
+  .loginSignUpTabsContentLogin form,
+  .loginSignUpTabsContentRegister form {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .loginSignUpTabsContentLogin form,
+  .loginSignUpTabsContentRegister form {
+    width: 280px;
+  }
+}
